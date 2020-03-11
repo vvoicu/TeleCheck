@@ -1,4 +1,4 @@
-# TEST FRAMEWORK COLLECTION
+# TeleCheck TESTING FRAMEWORK
 
 Container based test framework for application container migrations 
 
