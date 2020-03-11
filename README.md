@@ -499,10 +499,7 @@ Steps to configure:
     docker pull dosel/zalenium
     
     # Run it!
-    docker run --rm -ti --name zalenium -p 4444:4444 \
-      -v /var/run/docker.sock:/var/run/docker.sock \
-      -v /tmp/videos:/home/seluser/videos \
-      --privileged dosel/zalenium start
+    docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
       
     # Point your tests to http://localhost:4444/wd/hub and run them
 
@@ -536,7 +533,28 @@ http://localhost:9000/minio/login
 
 (use the access and the secret set when running MinIO)
 
-## 3.3 Minikube Setup
+## 3.3 Jenkins Setup
+
+Jenkins has come a long way to make CI setup as easy as possible. You may run it as a docker container or as a java command. Alternatively, you could also deploy it in a kubernetes cluster if it makes more sense.
+
+For the local run all you need to do is to download the jenkins.war file and run:
+
+```java -jar jenkins.war```
+
+Will start jenkins on the local machine
+
+For the docker setup you will need to create a folder on your local machine, where jenkis will save all the workspaces and all the data that needs to be persisted. Once you have created the folder you can run the following commands.
+
+```docker pull jenkins```
+
+Pull jenkins docker image
+
+```docker run -p 8080:8080 -p 50000:50000 -v C:\Users\vvoicu\jenkinsDocker:/var/jenkins_home jenkins```
+
+Start Jenkins, exposing the 8080 and the 50000 ports. It also sets the jenkinsDocker folder to be used from your local machine. You should change the path with the folder you have previously created.
+
+
+## 3.4 Minikube Setup
 
 In order to configure your own cluster environment, you may use minikube.
 You may choose any of the minikube examples for setting it up. For further details please follow the steps described in the minikube documentation.
@@ -546,9 +564,11 @@ Steps:
 Disable the Hyper-V on your machine 
 
 ```minikube start --vm-driver=hyperv```
+
 The command will start minikube
 
 ```minikube dashboard```
+
 The command will open the minikube Dashboard in your default browser
 
 
