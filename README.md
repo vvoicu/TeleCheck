@@ -32,6 +32,12 @@ The command will install JDK 8 and setup the Java and the Java_Home environment 
 ```choco install maven```
 The command will setup Maven on the machine.
 
+```choco install git```
+The  command will install git on your machine
+
+```git config --global core.autocrlf false```
+Due to the windows environment we will disable the autocrlf function. This is because we want our code to run on both Linux and Windows containers.
+
 You should now have a working windows environment for implementing some tests. You can double check the installation of the JDK by running:
 ```java -version```
 
@@ -529,6 +535,22 @@ MiniIO Management Link:
 http://localhost:9000/minio/login
 
 (use the access and the secret set when running MinIO)
+
+## 3.3 Minikube Setup
+
+In order to configure your own cluster environment, you may use minikube.
+You may choose any of the minikube examples for setting it up. For further details please follow the steps described in the minikube documentation.
+https://kubernetes.io/docs/setup/learning-environment/minikube/
+
+Steps:
+Disable the Hyper-V on your machine 
+
+```minikube start --vm-driver=hyperv```
+The command will start minikube
+
+```minikube dashboard```
+The command will open the minikube Dashboard in your default browser
+
 
 
 
