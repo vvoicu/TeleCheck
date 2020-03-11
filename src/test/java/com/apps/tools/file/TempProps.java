@@ -1,4 +1,4 @@
-package com.apps.tools;
+package com.apps.tools.file;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
+import com.apps.tools.Constants;
 
 public class TempProps {
 

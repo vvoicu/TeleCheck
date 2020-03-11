@@ -21,9 +21,9 @@ import org.w3c.dom.Document;
 import com.apps.tools.Constants;
 import com.apps.tools.FieldGenerators;
 import com.apps.tools.FieldGenerators.Mode;
-import com.apps.tools.FileUtils;
-import com.apps.tools.SftpConnection;
-import com.apps.tools.TempProps;
+import com.apps.tools.connectors.ftp.sftp.SftpConnection;
+import com.apps.tools.file.FileUtils;
+import com.apps.tools.file.TempProps;
 import com.ibm.icu.text.SimpleDateFormat;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
@@ -47,7 +47,7 @@ public class TC001aSftpFileUploadTest {
 
 		// temp file clean up for suite
 		FileUtils.deleteFileIfExistsInTemp("TC001aSftpFileUploadTest.properties");
-		FileUtils.deleteFileIfExistsInTemp("TC001aSftpFileUploadTest.properties");
+//		FileUtils.deleteFileIfExistsInTemp("TC001aSftpFileUploadTest.properties");
 
 		// generate xml payload
 //		paramountXmlData = xmlDataPreparation();

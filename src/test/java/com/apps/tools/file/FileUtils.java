@@ -1,4 +1,4 @@
-package com.apps.tools;
+package com.apps.tools.file;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
+import com.apps.tools.Constants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class FileUtils {

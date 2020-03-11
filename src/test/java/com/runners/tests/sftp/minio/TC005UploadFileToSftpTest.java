@@ -12,7 +12,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import com.apps.tools.Constants;
 import com.apps.tools.FieldGenerators;
 import com.apps.tools.FieldGenerators.Mode;
-import com.apps.tools.MinioSftpConnector;
+import com.apps.tools.connectors.ftp.minio.MinioSftpConnector;
 
 import io.minio.errors.MinioException;
 

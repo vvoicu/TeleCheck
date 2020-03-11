@@ -1,4 +1,4 @@
-package com.apps.tools;
+package com.apps.tools.connectors.ftp.sftp;
 
 import java.io.File;
 import java.util.Vector;
@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.apps.tools.Constants;
+import com.apps.tools.file.ConfigUtils;
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;

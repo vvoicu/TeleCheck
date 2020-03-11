@@ -1,9 +1,11 @@
-package com.apps.tools;
+package com.apps.tools.file;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+
+import com.apps.tools.Constants;
 
 public class ConfigUtils {
 

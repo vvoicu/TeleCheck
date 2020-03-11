@@ -7,8 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.apps.tools.Constants;
-import com.apps.tools.SftpConnection;
-import com.apps.tools.TempProps;
+import com.apps.tools.connectors.ftp.sftp.SftpConnection;
+import com.apps.tools.file.TempProps;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
 
@@ -29,7 +29,7 @@ public class TC001bVerifySftpDataProcessedTest {
 		Constants.REPORT_TEST_NAME = this.getClass().getSimpleName();
 		
 		// read sftp generated file name
-		fileName = TempProps.readProperty("TC001aParamountSftpFileUploadTest.properties", "fileName");
+		fileName = TempProps.readProperty("TC001aSftpFileUploadTest.properties", "fileName");
 	}
 
 	@Test

@@ -1,10 +1,12 @@
-package com.apps.tools;
+package com.apps.tools.connectors.ftp.minio;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 import org.xmlpull.v1.XmlPullParserException;
+
+import com.apps.tools.file.ConfigUtils;
 
 import io.minio.MinioClient;
 import io.minio.Result;
