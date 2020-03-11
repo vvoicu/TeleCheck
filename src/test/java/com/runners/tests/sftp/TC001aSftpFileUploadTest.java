@@ -1,6 +1,5 @@
 package com.runners.tests.sftp;
 
-import java.io.File;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -33,7 +32,7 @@ import com.jcraft.jsch.SftpException;
 public class TC001aSftpFileUploadTest {
 	private Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
 
-	private File xmlFile;
+//	private File xmlFile;
 	private String fileName = "";
 	private String className = this.getClass().getSimpleName();
 
@@ -47,8 +46,8 @@ public class TC001aSftpFileUploadTest {
 		Constants.REPORT_TEST_NAME = this.getClass().getSimpleName();
 
 		// temp file clean up for suite
-		FileUtils.deleteFileIfExistsInTemp("TC001aParamountSftpFileUploadTest.properties");
-		FileUtils.deleteFileIfExistsInTemp("TC001cVerifyParamountOderTest.properties");
+		FileUtils.deleteFileIfExistsInTemp("TC001aSftpFileUploadTest.properties");
+		FileUtils.deleteFileIfExistsInTemp("TC001aSftpFileUploadTest.properties");
 
 		// generate xml payload
 //		paramountXmlData = xmlDataPreparation();
@@ -59,11 +58,11 @@ public class TC001aSftpFileUploadTest {
 
 		// YYYMMDDRRR - generate sftp file name pattern
 		String dateNow = new SimpleDateFormat("yyyMMdd").format(new Date());
-		fileName = "_KDM_" + dateNow + FieldGenerators.generateRandomString(3, Mode.NUMERIC) + ".xml";
+		fileName = "FILE_KDM_" + dateNow + FieldGenerators.generateRandomString(3, Mode.NUMERIC) + ".xml";
 		logger.info("FileName: " + fileName);
 
 		// generate file with payload
-		xmlFile = FileUtils.writeXmlDocumentToFile(fileName, xmlDocumentContent);
+//		xmlFile = FileUtils.writeXmlDocumentToFile(fileName, xmlDocumentContent);
 
 	}
 
@@ -73,7 +72,7 @@ public class TC001aSftpFileUploadTest {
 		logger.info("NOTE: File name: " + fileName);
 
 		// write file to sftp
-		SftpConnection.sendFileToStxSftp(xmlFile.getAbsolutePath(), fileName);
+//		SftpConnection.sendFileToMinioSftp(xmlFile.getAbsolutePath(), fileName);
 
 		// get sftp remote files list\
 		String listItems = SftpConnection.getStxWorkingDirFileList();

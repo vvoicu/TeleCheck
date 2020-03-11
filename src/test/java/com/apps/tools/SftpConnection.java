@@ -17,7 +17,7 @@ import com.jcraft.jsch.SftpException;
 public class SftpConnection {
 	private static String SFTPWORKINGDIR = "/inbound/inbound";
 	private static String PARAMETER_PREFIX = "SFTP_";
-	
+
 	private static Channel channel = null;
 	private static ChannelSftp channelSftp = null;
 	private static Session session = null;
@@ -28,20 +28,21 @@ public class SftpConnection {
 	private static String SFTPUSER;
 	private static String SFTPPORT;
 
-	public static void sendFileToStxSftp(String localFilePath, String remoteFileName) throws JSchException, SftpException {
-		setConnectionParameters("STX");
+	public static void sendFileToMinioSftp(String localFilePath, String remoteFileName)
+			throws JSchException, SftpException {
+		setConnectionParameters("MINIO");
 		sendFileToSftp(localFilePath, remoteFileName);
 	}
 
 	public static String getStxWorkingDirFileList() throws JSchException, SftpException {
-		setConnectionParameters("STX");
+		setConnectionParameters("MINIO");
 		return getWorkingDirFileList();
 	}
-	
-	
-	//------- PRIVATE METHODS -------
-	
-	private static void sendFileToSftp(String localFilePath, String remoteFileName) throws JSchException, SftpException {
+
+	// ------- PRIVATE METHODS -------
+
+	private static void sendFileToSftp(String localFilePath, String remoteFileName)
+			throws JSchException, SftpException {
 		Logger logger = LoggerFactory.getLogger(Constants.REPORT_TEST_NAME);
 		createSftpConnection(SFTPHOST, SFTPPORT, SFTPUSER, mysshFile, SFTPPORT);
 		channelSftp.cd(SFTPWORKINGDIR);
@@ -50,9 +51,9 @@ public class SftpConnection {
 		logger.info("NOTE: File Uploaded with remote name: " + remoteFileName);
 		closeConnections();
 	}
-	
+
 	@SuppressWarnings("rawtypes")
-	private static String getWorkingDirFileList() throws SftpException, JSchException {
+	public static String getWorkingDirFileList() throws SftpException, JSchException {
 		Logger logger = LoggerFactory.getLogger(Constants.REPORT_TEST_NAME);
 		String results = "";
 		createSftpConnection(SFTPHOST, SFTPPORT, SFTPUSER, mysshFile, SFTPPORT);
@@ -94,7 +95,6 @@ public class SftpConnection {
 		if (session != null)
 			session.disconnect();
 	}
-	
 
 	/**
 	 * Create a SFTP connection with details from config properties

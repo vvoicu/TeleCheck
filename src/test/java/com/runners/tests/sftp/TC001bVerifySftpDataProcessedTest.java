@@ -6,14 +6,13 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.apps.tools.Constants;
+import com.apps.tools.SftpConnection;
+import com.apps.tools.TempProps;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
 
-import mps.tools.Constants;
-import mps.tools.connectors.SftpConnection;
-import rbs.tools.TempProps;
-
-public class TC001bParamountVerifySftpDataProcessedTest {
+public class TC001bVerifySftpDataProcessedTest {
 	private Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
 
 	private String fileName = "..";

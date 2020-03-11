@@ -11,5 +11,8 @@ public class Constants {
 	
 	public static String REPORT_TEST_NAME = "ROOT";
 	
-	
+
+	//API
+	public static final long TEST_RETRY_WAIT_TIME_SECONDS = 100;
+	public static final long TEST_RETRY_WAIT_TIME = 60000;
 }

@@ -66,13 +66,19 @@
 		</dependency>
 
 
-	<!-- SFTP conection -->
+		<!-- SFTP conection -->
 		<dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>
 			<version>0.1.54</version>
 		</dependency>
-		
+		<!-- dependency used to demonstrate SFTP connector -->
+		<dependency>
+			<groupId>io.minio</groupId>
+			<artifactId>minio</artifactId>
+			<version>6.0.8</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
