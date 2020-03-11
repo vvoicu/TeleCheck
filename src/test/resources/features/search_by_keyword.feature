@@ -7,4 +7,10 @@ Feature: Searching by keyword
   Scenario: Should list items related to a specified keyword
     Given I want to buy 'wool'
     When I search for items containing 'wool'
-    Then I should only see items related to 'wool'
+    Then I should only see items related to 'Anything with a texture like that of wool'
+    
+    
+  Scenario: Negative - Should list items related to a specified keyword
+    Given I want to buy 'wool'
+    When I search for items containing 'wool'
+    Then I should only see items related to 'that of wool'
