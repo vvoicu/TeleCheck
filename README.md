@@ -411,46 +411,7 @@ Note: you may also add tags and run the command with cucumber options (note the 
 mvn -Pdefault verify -Dcucumber.options="--tags @debug1 --tags @debug2"
 ```
 
-
-## 2.8 Server Creation Test (Vertx)
-
-When you intend to test a certain service, sometimes it might be hard to create a running server with some business login to make the application under test behave in some desired manner. This is where Vertx comes in. We can create lightweight services (client or server) with vertx, since it is a framework build for microservice development.
-
-Test Scenario:
-
-The TC009VertxRunnerTest test class is split into three sections. In the setup we will first do a clean up check for the KillSwitch property. After that we will be setting up Vertx.
-In the test body we will be deploying the Server.
-In the tearDown we will be looking for the killSwitch flag to be found in one of the requests. When the switch is found, vertx will undeploy all verticles and close.
-
-Class Structure:
-
-TestServerVerticle  - class is deployed in the Vertx Test Runner. The class defines the server configurations:
-	- server port to start on
-	- exposed endpoints - currently only the ```POST - [host.url]:[host.port]/broker/message```
-	- here is where we will add more implementations of endpoint URLs
-
-TestRequestHandler - each exposed endpoint will have a handler for the request. 
-	- The handler will get the request from the client, apply the business logic and respond back to the client.
-	- Specifically, this handler will generate a nanoId and will send back to the client the initial request on one filed and a nanoID on the second field.
-
-ClientResponseMessage - is used by the TestRequestHandler as a data model for the answer it will return for the request.
-
-
-Note: you will need to setup jMeter or run the jMeter script in order to test the functionality.
-
-Command Line Run:
-```
-mvn -Pdefault -DtestSuite=TC009VertxRunnerTest verify
-```
-
-Container Run:
-```
-docker run timage -Pdefault -DtestSuite=TC009VertxRunnerTest 
-```
-
-Note: for more information on vertx please see the documentation page: ```https://vertx.io/docs/```
-
-## 2.9 Performance/Functional Test Script (JMeter)
+## 2.8 Performance/Functional Test Script (JMeter)
 
 The VertxServerPerformancePlan.jmx file can be found in the ```src/test/resources/jmeter/``` folder.
 The script contains 4 test scenarios that are run as part of the setup. Then the test will send a request with a killSwitch. The test will wait for 11 seconds and run the tearDown running the requests again and checking if the connection has been refused, thus validating if the server was taken down.
