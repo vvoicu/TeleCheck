@@ -300,35 +300,6 @@ docker run timage -Pdefault -DtestSuite=TC002ApiReqresGetTest verify
 ```
 
 
-## 2.4 Outlook Email Test
-
-Mail test implementation relies on the OutlookMailConnector located in ```com.monarch.tools.connectors```. Mail Connector is picking up the configurations from the ```src/test/resources/configs``` files. Its looking for the keys:
-```
-#user
-EMAIL_ACCOUNT_USER
-EMAIL_ACCOUNT_PASS
-#server
-EMAIL_SERVER_HOST
-EMAIL_SERVER_PORT
-EMAIL_STORE_TYPE
-#work directory
-EMAIL_READ_FOLDER
-```
-Keys are correlated with the OutlookConnectorSession object that defines the connection session details that are read from the config file. Data is used to perform the initial connection.
-
-The test will grab all the emails received today and will sort out of all the messages that contain in the body, the required string specified in the test. It will then save all the data found in the emails to a text file. In order to map out the extracted data from emails there is an object EmailObjectModel that will contain all the data for extracted emails.
-
-In order to run the email test you can execute:
-```
-mvn -Pdefault -DtestSuite=TC004CheckEmailTest verify
-```
-
-Container Run:
-```
-docker run timage -Pdefault -DtestSuite=TC004CheckEmailTest verify
-```
-
-
 ## 2.5 SFTP Test (using MinIO)
 
 MinIO test implementation relies on the MinioSftpConnector that can upload and read files from the SFTP. MinioSftpConnector is going to setup the connection based on the properties set in the config file. 
