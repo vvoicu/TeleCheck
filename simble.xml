@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CertificateSigningRequestBatch xmlns="http://o2.ot.csr.schema">
+  <CertificateSigningRequestBatchId>1551801772366</CertificateSigningRequestBatchId>
+  <DocumentCreated>2017-09-17T11:22:24Z</DocumentCreated>
+  <NumberOfCSRsInBatch>4</NumberOfCSRsInBatch>
+  <Manufacturer>
+    <PartnerName>Toshiba</PartnerName>
+    <PartnerId>TOSHIBA</PartnerId>
+    <PartnerContact>
+      <PartnerContactName>Karin Head</PartnerContactName>
+      <PartnerContactTelephone>0044 1932 822881</PartnerContactTelephone>
+      <PartnerContactEmail>E2QzvavDbqdJvU7gUqdU</PartnerContactEmail>
+    </PartnerContact>
+  </Manufacturer>
+  <CertificateSigningRequest>
+    <GPFGUID>887384AA8307B6C0</GPFGUID>
+    <CertificatePurpose>DK</CertificatePurpose>
+    <CSR>MIIBEDCBtwIBADAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7rKy5mHyubQYIoWk5SmNDo3KyjbpVM5OAi/eBoEO8xV8uwXQcZqhR79eh1/CU/Wtm0mKWRq6pgkcnyhx2N15S6BVMFMGCSqGSIb3DQEJDjFGMEQwDgYDVR0PAQH/BAQDAgeAMDIGA1UdEQEB/wQoMCagJAYIKwYBBQUHCASgGDAWBgoqhjoAilwBAQIBBAiIc4Sqgwe2wDAKBggqhkjOPQQDAgNIADBFAiAbaq0hFdGtDtKIK1wWeZBkp7+qm9vRfY/qayfm/MvdKAIhAPF3gTMkBg5hjgJIv0R7WPJw6a5HD/kNgoDOVyQM2jn3</CSR>
+  </CertificateSigningRequest>
+  <CertificateSigningRequest>
+    <GPFGUID>887384AA8307B6C0</GPFGUID>
+    <CertificatePurpose>KAK</CertificatePurpose>
+    <CSR>MIIBETCBtwIBADAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7rKy5mHyubQYIoWk5SmNDo3KyjbpVM5OAi/eBoEO8xV8uwXQcZqhR79eh1/CU/Wtm0mKWRq6pgkcnyhx2N15S6BVMFMGCSqGSIb3DQEJDjFGMEQwDgYDVR0PAQH/BAQDAgMIMDIGA1UdEQEB/wQoMCagJAYIKwYBBQUHCASgGDAWBgoqhjoAilwBAQIBBAiIc4Sqgwe2wDAKBggqhkjOPQQDAgNJADBGAiEA7SA+hJJB71jtRIqBjDbfjJskPIXqaSybivHydxwf0XgCIQCmCzLegtnHeEdNUYuDJXiUKLAWhX9xlepxkRyc6FLqqw==</CSR>
+  </CertificateSigningRequest>
+  <CertificateSigningRequest>
+    <GPFGUID>887384018307B6C0</GPFGUID>
+    <CertificatePurpose>DK</CertificatePurpose>
+    <CSR>MIIBDzCBtwIBADAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7rKy5mHyubQYIoWk5SmNDo3KyjbpVM5OAi/eBoEO8xV8uwXQcZqhR79eh1/CU/Wtm0mKWRq6pgkcnyhx2N15S6BVMFMGCSqGSIb3DQEJDjFGMEQwDgYDVR0PAQH/BAQDAgeAMDIGA1UdEQEB/wQoMCagJAYIKwYBBQUHCASgGDAWBgoqhjoAilwBAQIBBAiIc4QBgwe2wDAKBggqhkjOPQQDAgNHADBEAiBNwAOwF6x/a2DRw/sIS209TCMlc7QKxbNazb/JgFyF2AIgJSMfqxTosfaONF0Z3T2TGDIBeJbVOnOyZMzv3YmWQjo=</CSR>
+  </CertificateSigningRequest>
+  <CertificateSigningRequest>
+    <GPFGUID>887384018307B6C0</GPFGUID>
+    <CertificatePurpose>KAK</CertificatePurpose>
+    <CSR>MIIBEDCBtwIBADAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7rKy5mHyubQYIoWk5SmNDo3KyjbpVM5OAi/eBoEO8xV8uwXQcZqhR79eh1/CU/Wtm0mKWRq6pgkcnyhx2N15S6BVMFMGCSqGSIb3DQEJDjFGMEQwDgYDVR0PAQH/BAQDAgMIMDIGA1UdEQEB/wQoMCagJAYIKwYBBQUHCASgGDAWBgoqhjoAilwBAQIBBAiIc4QBgwe2wDAKBggqhkjOPQQDAgNIADBFAiEAnzhnMO68Xpl5W1oQKlzvzaJH+ibMyAOfB3PWLmBS6x8CID0FwEbZGo+DHvO9MEo36QOv3OmTOwJc6ZNBpsGf57Ox</CSR>
+  </CertificateSigningRequest>
+</CertificateSigningRequestBatch>
+
